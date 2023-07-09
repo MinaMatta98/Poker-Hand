@@ -1,17 +1,17 @@
-name: Rust
+name: Cargo Test
 
 on:
   push:
-    branches: [ "main" ]
-
-env:
-  CARGO_TERM_COLOR: always
+    branches:
+      - main
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - name: Run tests
-      run: cargo test -- --ignored
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run tests
+        run: cargo test -- --ignored
