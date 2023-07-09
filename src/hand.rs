@@ -13,7 +13,10 @@ pub enum Suit {
 // Each card type is necessary when checking for equality and attributing a value
 #[derive(Debug, PartialEq, Eq, Clone, Hash)]
 pub enum Card {
-    Ace,
+    // Assume Ace -> 13 at init
+    AceHigh,
+    //Special case scenario for straight flushes. Needs to be checked
+    AceLow,
     Two,
     Three,
     Four,
@@ -31,7 +34,7 @@ pub enum Card {
 impl Card {
     pub fn value(&self) -> u8 {
         match self {
-            Card::Ace => 13,
+            Card::AceHigh => 13,
             Card::Two => 1,
             Card::Three => 2,
             Card::Four => 3,
@@ -44,12 +47,14 @@ impl Card {
             Card::Jack => 10,
             Card::Queen => 11,
             Card::King => 12,
+            Card::AceLow => 1,
         }
     }
 
     fn from_value(value: &str) -> Result<Card, CardError> {
         match value {
-            "A" => Ok(Card::Ace),
+            //Always start with AceHigh
+            "A" => Ok(Card::AceHigh),
             "2" => Ok(Card::Two),
             "3" => Ok(Card::Three),
             "4" => Ok(Card::Four),
