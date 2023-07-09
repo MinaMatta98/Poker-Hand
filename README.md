@@ -1,3 +1,5 @@
+[![Cargo Test](https://github.com/MinaMatta98/Poker-Hand/actions/workflows/rust.yml/badge.svg)](https://github.com/MinaMatta98/Poker-Hand/actions/workflows/rust.yml)
+
 ### Brief
 
 Pick the best hand(s) from a list of poker hands.
