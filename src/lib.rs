@@ -31,6 +31,21 @@ enum Card {
     King,
 }
 
+// Each ranking must implemented in an Enum to value it later
+#[derive(Debug)]
+enum Ranking {
+    FiveOfAKind,
+    StraightFlush,
+    FourOfAKind,
+    FullHouse,
+    Flush,
+    Straight,
+    ThreeOfAKind,
+    TwoPair,
+    OnePair,
+    HighCard,
+}
+
 pub fn winning_hands<'a>(hands: &[&'a str]) -> Option<Vec<&'a str>> {
     unimplemented!("Out of {:?}, which hand wins?", hands)
 }
