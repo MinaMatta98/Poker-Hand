@@ -1,4 +1,4 @@
-[![Cargo Test](https://github.com/MinaMatta98/Poker-Hand/actions/workflows/rust.yml/badge.svg)](https://github.com/MinaMatta98/Poker-Hand/actions/workflows/rust.yml)
+[![Cargo Test](https://github.com/MinaMatta98/Poker-Hand/actions/workflows/rust.yml/badge.svg?branch=main)](https://github.com/MinaMatta98/Poker-Hand/actions/workflows/rust.yml)
 
 ### Brief
 
